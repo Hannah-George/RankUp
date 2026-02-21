@@ -155,7 +155,11 @@ async function dbSaveAttempt({ userId, questionId, isCorrect }) {
 async function dbUpdateUserStats(userId, newRating, newStreak, lastSolvedDate) {
   await supabase
     .from("users")
-    .update({ rating: newRating, streak: newStreak, last_solved_date: lastSolvedDate })
+    .update({
+      rating: newRating,
+      streak: newStreak,
+      last_solved_date: lastSolvedDate
+    })
     .eq("id", userId);
 }
 
@@ -583,6 +587,9 @@ function SolvePage({ user, onRatingChange, addToast, onAttempt }) {
       setLoading(false);
       // Small delay then fade in
       setTimeout(() => setFadeIn(true), 50);
+      // Start timer automatically after question loads
+      setTimerActive(true);
+      setStartTime(Date.now());
     }
   }, []);
 
@@ -652,12 +659,14 @@ function SolvePage({ user, onRatingChange, addToast, onAttempt }) {
 
     // Fire-and-forget DB writes — don't block UI
     const newRating = u.rating + total;
-    const newStreak = correct ? calcStreak(u.streak, u.lastSolvedDate) : u.streak;
+    const newStreak = correct ? calcStreak(u.streak, u.lastSolvedDate) : 0;
     const newDate = correct ? todayStr() : u.lastSolvedDate;
     Promise.all([
       dbSaveAttempt({ userId: u.userId, questionId: question.id, isCorrect: correct }),
       dbUpdateUserStats(u.userId, newRating, newStreak, newDate),
     ]).catch(() => {}); // silently ignore DB errors for demo
+    // Update local user state to match DB
+    setUser(prev => prev ? { ...prev, rating: newRating, streak: newStreak, lastSolvedDate: newDate } : prev);
   };
 
   const handleNext = () => {
