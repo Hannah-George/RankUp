@@ -9,7 +9,7 @@
 - **Member 2:** Nanda Rajeev - MITS Kochi
 
 ### Hosted Project Link
-[https://rankup.dev](https://rankup.dev)
+https://rankup100.vercel.app/
 
 ---
 
@@ -205,7 +205,7 @@ Student reads question → starts timer → selects answer
 
 ### API Documentation
 
-**Base URL:** `https://api.rankup.dev`
+**Base URL:** `[https://api.rankup.dev]`
 
 ---
 
