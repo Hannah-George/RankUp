@@ -123,13 +123,16 @@ npm run dev
 
 *Main dashboard showing the student's JEE rating (1248), 12-day streak, Next Rated Challenge card, and subject performance cards for Physics, Chemistry, and Mathematics — each with their individual ratings and critical weakness indicators.*
 
-![Solve Mode](screenshots/solve-mode.png)
+<img width="1920" height="1020" alt="solve" src="https://github.com/user-attachments/assets/5b962ff7-7c2a-4882-ad3f-32af7590f11e" />
+
 *The Solve Mode page showing a JEE Physics question with a 90-second countdown timer, four answer options (option D selected and highlighted in green), subject filter tabs at the top (Physics active), and difficulty/topic tags.*
 
-![Leaderboard](screenshots/leaderboard.png)
+<img width="1920" height="1020" alt="leaderboard" src="https://github.com/user-attachments/assets/3ae66082-7dc7-42d0-b266-535d5bb23a43" />
+
 *The Global Leaderboard page for JEE, showing the top-ranked students with their ratings, tier badges (Legend, Master, Grandmaster), daily streaks, and today's rating change. The current user (Aryan Sharma, rank #8) is highlighted in green. The right panel shows the user's standings across all three exams — JEE, NEET, and GATE.*
 
-![Result Overlay](screenshots/result-overlay.png)
+<img width="1920" height="1020" alt="result" src="https://github.com/user-attachments/assets/73248ee9-329c-4021-ab5f-e21788bf824c" />
+
 *The result feedback modal that appears after submitting an answer, showing "Correct!" with the rating delta (+20), speed bonus (+5), and buttons to review the answer or move to the next question.*
 
 ---
