@@ -118,7 +118,9 @@ npm run dev
 ### For Software
 
 #### Screenshots
-![Dashboard]()
+
+<img width="1920" height="1020" alt="dashboard" src="https://github.com/user-attachments/assets/1cc96a1d-8efa-4f24-8149-57c897960404" />
+
 *Main dashboard showing the student's JEE rating (1248), 12-day streak, Next Rated Challenge card, and subject performance cards for Physics, Chemistry, and Mathematics — each with their individual ratings and critical weakness indicators.*
 
 ![Solve Mode](screenshots/solve-mode.png)
